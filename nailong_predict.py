@@ -10,7 +10,7 @@ print(f"正在使用的计算设备: {device}")
 
 model_path = './out/0417-172404/model_best.pth'
 
-folder_path = './dataset/val/others'
+folder_path = './try'
 
 idx_to_class = {0: '奶龙', 1: '非奶龙'}
 
@@ -60,7 +60,6 @@ else:
                 image = Image.open(img_path).convert('RGB')
                 input_tensor = transform(image).unsqueeze(0).to(device)
 
-                # 进行预测
                 with torch.no_grad():
                     outputs = model(input_tensor)
                     probabilities = torch.nn.functional.softmax(outputs[0], dim=0)
@@ -68,10 +67,15 @@ else:
 
                     predicted_idx = predicted_idx.item()
                     confidence = max_prob.item() * 100
-                    predicted_name = idx_to_class.get(predicted_idx, '未知')
+
+                    # === 90%以上才输出结果，否则输出无法确定 ===
+                    if confidence >= 90.0:
+                        predicted_name = idx_to_class.get(predicted_idx, '未知')
+                    else:
+                        predicted_name = "无法确定"
 
                 # 打印这一张图片的结果
-                print(f"文件: {img_name:<15} | 鉴定结果: {predicted_name:<6} | 置信度: {confidence:.2f}%")
+                print(f"文件: {img_name:<15} | 鉴定结果: {predicted_name:<12} | 置信度: {confidence:.2f}%")
 
             except Exception as e:
                 print(f"处理图片 {img_name} 时出错: {e}")
