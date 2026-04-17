@@ -25,11 +25,11 @@ pip install torch torchvision pillow tqdm
 
 dataset/  
 ├── train/  
-│   ├── class\_0/ (例如：不是奶龙的图片)  
-│   └── class\_1/ (例如：是奶龙的图片)  
+│   ├── class\_1/ (例如：不是奶龙的图片)  
+│   └── class\_0/ (例如：是奶龙的图片)  
 └── val/  
-    ├── class\_0/  
-    └── class\_1/
+    ├── class\_1/  
+    └── class\_0/
 
 **3\. 训练模型**
 
@@ -65,11 +65,11 @@ Create a dataset folder in the root directory with the following structure:
 
 dataset/  
 ├── train/  
-│   ├── class\_0/ (e.g., Non-Nailoong images)  
-│   └── class\_1/ (e.g., Nailoong images)  
+│   ├── class\_1/ (e.g., Non-Nailoong images)  
+│   └── class\_0/ (e.g., Nailoong images)  
 └── val/  
-    ├── class\_0/  
-    └── class\_1/
+    ├── class\_1/  
+    └── class\_0/
 
 **3\. Train the Model**
 
@@ -105,11 +105,11 @@ pip install torch torchvision pillow tqdm
 
 dataset/  
 ├── train/  
-│   ├── class\_0/ (例：乳龍ではない画像)  
-│   └── class\_1/ (例：乳龍の画像)  
+│   ├── class\_1/ (例：乳龍ではない画像)  
+│   └── class\_0/ (例：乳龍の画像)  
 └── val/  
-    ├── class\_0/  
-    └── class\_1/
+    ├── class\_1/  
+    └── class\_0/
 
 **3\. モデルの学習**
 
