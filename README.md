@@ -25,15 +25,15 @@ pip install torch torchvision pillow tqdm
 
 dataset/  
 ├── train/  
-│   ├── class\_0/ (例如：不是奶龙的图片)  
-│   └── class\_1/ (例如：是奶龙的图片)  
+│   ├── class\_1/ (例如：不是奶龙的图片)  
+│   └── class\_0/ (例如：是奶龙的图片)  
 └── val/  
-    ├── class\_0/  
-    └── class\_1/
+    ├── class\_1/  
+    └── class\_0/
 
 **3\. 训练模型**
 
-python train.py
+python train_nailoong.py
 
 *训练完成后，最佳模型将保存在 out/ 目录下。*
 
@@ -41,7 +41,7 @@ python train.py
 
 在根目录创建 try/ 文件夹，放入需要测试的图片，然后运行：
 
-python predict.py
+python nailong_predict.py
 
 ## **English**
 
@@ -65,15 +65,15 @@ Create a dataset folder in the root directory with the following structure:
 
 dataset/  
 ├── train/  
-│   ├── class\_0/ (e.g., Non-Nailoong images)  
-│   └── class\_1/ (e.g., Nailoong images)  
+│   ├── class\_1/ (e.g., Non-Nailoong images)  
+│   └── class\_0/ (e.g., Nailoong images)  
 └── val/  
-    ├── class\_0/  
-    └── class\_1/
+    ├── class\_1/  
+    └── class\_0/
 
 **3\. Train the Model**
 
-python train.py
+python train_nailoong.py
 
 *After training, the best model will be saved in the out/ directory.*
 
@@ -81,7 +81,7 @@ python train.py
 
 Create a try/ folder, place the images you want to test inside, and run:
 
-python predict.py
+python nailong_predict.py
 
 ## **日本語**
 
@@ -105,15 +105,15 @@ pip install torch torchvision pillow tqdm
 
 dataset/  
 ├── train/  
-│   ├── class\_0/ (例：乳龍ではない画像)  
-│   └── class\_1/ (例：乳龍の画像)  
+│   ├── class\_1/ (例：乳龍ではない画像)  
+│   └── class\_0/ (例：乳龍の画像)  
 └── val/  
-    ├── class\_0/  
-    └── class\_1/
+    ├── class\_1/  
+    └── class\_0/
 
 **3\. モデルの学習**
 
-python train.py
+python train_nailoong.py
 
 *学習完了後、最適なモデルは out/ ディレクトリに保存されます。*
 
@@ -121,4 +121,4 @@ python train.py
 
 ルートディレクトリに try/ フォルダを作成し、テストしたい画像を入れて以下を実行します：
 
-python predict.py  
+python nailong_predict.py  
