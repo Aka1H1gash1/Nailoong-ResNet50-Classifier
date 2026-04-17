@@ -1,0 +1,4 @@
+torch~=2.8.0+cu128
+torchvision~=0.23.0+cu128
+tqdm~=4.67.3
+pillow~=11.3.0
